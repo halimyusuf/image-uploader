@@ -1,9 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background-color: #fafafa; */
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  /* background-color: aqua; */
+  border-radius: 12px;
+  max-width: 402px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-upload-cont {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-file-btn {
+  width: 101px;
+  height: 31.98px;
+  background: #2f80ed;
+  border-radius: 8px;
+  color: white;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-file-btn:hover {
+  cursor: pointer;
+}
+
+.choose-file-btn-text {
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.035em;
+  text-align: center;
+}
+
+.image-drop-cont {
+  width: 100%;
+  height: 218.9px;
+  background: #f6f8fb;
+  border: 1px dashed #97bef4;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upload-text {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.upload-text-1 {
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: -0.035em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.upload-text-2 {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+
+.upload-text-3 {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.035em;
+  text-align: center;
+  margin: 10px 0;
 }
 
 a {
