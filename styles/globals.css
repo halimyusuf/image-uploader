@@ -13,12 +13,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .box {
   /* background-color: aqua; */
   border-radius: 12px;
-  max-width: 402px;
+  /* max-width: 402px; */
+  width: 400px;
+  max-width: 90%;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -78,7 +81,7 @@ body {
   line-height: 27px;
   letter-spacing: -0.035em;
   text-align: left;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .upload-text-1 {
@@ -89,7 +92,7 @@ body {
   line-height: 15px;
   letter-spacing: -0.035em;
   text-align: center;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .upload-text-2 {
@@ -110,7 +113,18 @@ body {
   line-height: 18px;
   letter-spacing: -0.035em;
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0;
+}
+
+.img-upload-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-upload-action div:nth-child(2) {
+  display: none;
 }
 
 a {
