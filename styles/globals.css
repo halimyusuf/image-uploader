@@ -73,6 +73,10 @@ body {
   flex-direction: column;
 }
 
+.image-drop-cont.drag-active {
+  opacity: 0.7;
+}
+
 .upload-text {
   font-family: Poppins;
   font-size: 18px;
@@ -103,6 +107,7 @@ body {
   line-height: 18px;
   letter-spacing: -0.035em;
   text-align: left;
+  margin: 15px 0;
 }
 
 .upload-text-3 {
