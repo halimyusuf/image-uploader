@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-export default function SuccessfulUpload({ url }) {
+export default function SuccessfulUpload({ url, onReset }) {
   const [text, setText] = useState("Copy Link");
   url = url ? url : "/image.svg";
   function onCopy() {
@@ -28,6 +28,9 @@ export default function SuccessfulUpload({ url }) {
           <div className="copy-link-text">{text}</div>
         </div>
         <div className="image-link">{url}</div>
+      </div>
+      <div onClick={onReset} className="reupload-btn">
+        <div className="reupload-btn-text">Upload</div>
       </div>
     </div>
   );

@@ -6,13 +6,18 @@ import SuccessfulUpload from "./SuccessFulUpload";
 import UploadingState from "./UploadingState";
 
 const defaultImg = "/image.svg";
+const defaultData = {
+  picturePreview: defaultImg,
+  status: "idle",
+  error: false,
+};
 export default function ImageUploader() {
   const fileInputRef = useRef(null);
-  const [picture, setPicture] = useState({
-    picturePreview: defaultImg,
-    status: "idle",
-    error: false,
-  });
+  const [picture, setPicture] = useState(defaultData);
+
+  function onReset() {
+    setPicture(defaultData);
+  }
 
   // dropzone
   const onDrop = useCallback((acceptedFiles) => {
@@ -65,13 +70,12 @@ export default function ImageUploader() {
   }
 
   const { status, error, url, picturePreview } = picture;
-  console.log("status", status);
   return (
     <div className="image-upload-cont">
       {status === "pending" && !error ? (
         <UploadingState />
       ) : status === "resolved" && !error ? (
-        <SuccessfulUpload url={url} />
+        <SuccessfulUpload onReset={onReset} url={url} />
       ) : (
         <>
           <div className="upload-text">Upload your image</div>
