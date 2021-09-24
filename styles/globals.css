@@ -34,7 +34,8 @@ body {
   justify-content: center;
 }
 
-.choose-file-btn {
+.choose-file-btn,
+.reupload-btn {
   width: 101px;
   height: 31.98px;
   background: #2f80ed;
@@ -47,16 +48,22 @@ body {
   margin: 10px 0;
 }
 
-.choose-file-btn:hover {
+.choose-file-btn:hover,
+.reupload-btn:hover {
   cursor: pointer;
 }
 
-.choose-file-btn-text {
+.choose-file-btn-text,
+.reupload-btn-text {
   font-family: Noto Sans;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: -0.035em;
   text-align: center;
+}
+
+.reupload-btn {
+  margin: 30px auto 10px;
 }
 
 .image-drop-cont {
