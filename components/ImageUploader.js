@@ -5,6 +5,7 @@ import { useDropzone } from "react-dropzone";
 import SuccessfulUpload from "./SuccessfulUpload";
 import UploadingState from "./UploadingState";
 
+// const baseRoute = "https://image-uploader-mu.vercel.app";
 const defaultImg = "/image.svg";
 const defaultData = {
   picturePreview: defaultImg,
@@ -46,13 +47,9 @@ export default function ImageUploader() {
     const formData = new FormData();
     formData.append("file", picture.picture);
     try {
-      let data = await axios.post(
-        "http://localhost:3000/api/upload",
-        formData,
-        {
-          headers: { "Content-Type": "multipart/form-data" },
-        }
-      );
+      let data = await axios.post("/api/upload", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
       data = data.data;
       setPicture({ ...picture, url: data.url, status: "resolved" });
     } catch (error) {
