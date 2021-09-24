@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRef, useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
+import UploadingState from "./UploadingState";
 
 const defaultImg = "/image.svg";
 export default function ImageUploader() {
@@ -21,7 +22,7 @@ export default function ImageUploader() {
     accept: "image/png, image/gif, image/jpeg",
   });
 
-  console.log(isDragActive, picture);
+  // console.log(isDragActive, picture);
 
   function clickInputFile() {
     fileInputRef.current.click();
@@ -37,7 +38,8 @@ export default function ImageUploader() {
 
   return (
     <div className="image-upload-cont">
-      <div className="upload-text">Upload your image</div>
+      <UploadingState />
+      {/* <div className="upload-text">Upload your image</div>
       <div className="upload-text-1">File should be Jpeg, Png,...</div>
       <div
         className={`image-drop-cont ${isDragActive ? "drag-active" : ""}`}
@@ -59,7 +61,7 @@ export default function ImageUploader() {
             accept="image/png, image/gif, image/jpeg"
           ></input>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
