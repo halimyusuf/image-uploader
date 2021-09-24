@@ -2,7 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import { useRef, useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import SuccessfulUpload from "./SuccessFulUpload";
+import SuccessfulUpload from "./SuccessfulUpload";
 import UploadingState from "./UploadingState";
 
 const defaultImg = "/image.svg";
