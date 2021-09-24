@@ -1,5 +1,13 @@
 import Image from "next/image";
-export default function SuccessfulUpload() {
+import { useState } from "react";
+export default function SuccessfulUpload({ url }) {
+  const [text, setText] = useState("Copy Link");
+  url = url ? url : "/image.svg";
+  function onCopy() {
+    navigator.clipboard.writeText(url);
+    console.log("nsnns");
+    setText("Copied!");
+  }
   return (
     <div>
       <div className="success-icon d-flex-c">
@@ -8,20 +16,18 @@ export default function SuccessfulUpload() {
       <div className="successful-upload-text">Uploaded Successfully!</div>
       <div className="image-display">
         <Image
-          src="/image.svg"
+          src={url}
           width="700"
-          height="300"
+          height="350"
           layout="responsive"
           alt="..."
         />
       </div>
       <div className="image-link-cont">
-        <div className="image-link">
-          https://images.yourdomain.com/photo-1496950866446-325...
+        <div className="copy-link-btn" onClick={onCopy}>
+          <div className="copy-link-text">{text}</div>
         </div>
-        <div className="copy-link-btn">
-          <div className="copy-link-text">Copy Link</div>
-        </div>
+        <div className="image-link">{url}</div>
       </div>
     </div>
   );
