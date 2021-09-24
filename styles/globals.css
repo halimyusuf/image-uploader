@@ -44,6 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .choose-file-btn:hover {
@@ -175,21 +176,24 @@ body {
 }
 
 .image-display {
-  width: 100%;
+  width: 85%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .image-link-cont {
-  width: 100%;
+  max-width: 85%;
   background: #f6f8fb;
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
   border-radius: 8px;
   margin: 25px 0;
   display: flex;
-  align-self: start;
+  margin: auto;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1px 0 5px;
+  padding: 0 5px 0 1px;
+  overflow-x: hidden;
 }
 
 .image-link {
@@ -199,11 +203,11 @@ body {
   text-align: center;
   letter-spacing: -0.035em;
   color: #4f4f4f;
-  padding-right: 4px;
+  padding-left: 4px;
 }
 
 .copy-link-btn {
-  width: 74px;
+  min-width: 74px;
   height: 34px;
   background: #2f80ed;
   border-radius: 8px;
