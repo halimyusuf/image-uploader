@@ -9,7 +9,7 @@ export default function SuccessfulUpload({ url, onReset }) {
     setText("Copied!");
   }
   return (
-    <div>
+    <div style={{ maxWidth: "100%" }}>
       <div className="success-icon d-flex-c">
         <Image src="/success.png" height="35" width="35" alt="success" />
       </div>
